@@ -1,6 +1,8 @@
 class CommentsCell < Cell::ViewModel
   include ::Cell::Erb
 
+  cache :show, expires_in: 10.minutes
+
   property :body
   property :name
 
